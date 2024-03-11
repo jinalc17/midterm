@@ -200,28 +200,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="090-Kj-kJ5">
-                                <rect key="frame" x="165" y="702" width="63" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Lab2">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Lsp-EJ-enG" kind="show" id="VS4-3I-2Kf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3jb-UV-FLF"/>
                         <color key="backgroundColor" red="0.93434343434343436" green="0.82520834827574041" blue="0.64670638575956607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wqf-PG-k0s" firstAttribute="centerX" secondItem="Kdq-5U-5LN" secondAttribute="centerX" id="1Iq-cY-sNF"/>
-                            <constraint firstItem="090-Kj-kJ5" firstAttribute="centerX" secondItem="Kdq-5U-5LN" secondAttribute="centerX" id="Rhk-KC-9K8"/>
-                            <constraint firstAttribute="bottom" secondItem="090-Kj-kJ5" secondAttribute="bottom" constant="115" id="lJP-jW-rEt"/>
                             <constraint firstItem="Wqf-PG-k0s" firstAttribute="top" secondItem="Kdq-5U-5LN" secondAttribute="top" constant="120" id="le7-hE-P4d"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Jinal Chandibhamar" id="GMs-Hk-Cmh"/>
+                    <navigationItem key="navigationItem" title="Jinal Chandibhamar" id="GMs-Hk-Cmh">
+                        <barButtonItem key="rightBarButtonItem" title="Lab2" id="Fw4-TI-Ccl">
+                            <connections>
+                                <segue destination="Lsp-EJ-enG" kind="show" id="E6Y-jZ-mtn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NX-5M-8uG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,16 +230,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOG-Il-4on">
-                                <rect key="frame" x="165.33333333333334" y="613.66666666666663" width="62.666666666666657" height="34.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Lab3">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="JIf-bR-qMm" kind="show" id="oEO-SU-TuT"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dil-pI-wlZ">
                                 <rect key="frame" x="130" y="143" width="133" height="193"/>
                                 <subviews>
@@ -331,17 +315,21 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="jOG-Il-4on" firstAttribute="top" secondItem="ev3-mT-4Ia" secondAttribute="bottom" constant="30" id="A56-9g-UyQ"/>
                             <constraint firstItem="ev3-mT-4Ia" firstAttribute="centerX" secondItem="Vhf-70-6pc" secondAttribute="centerX" id="Acj-N1-svT"/>
                             <constraint firstItem="iFN-ze-iEE" firstAttribute="centerX" secondItem="Vhf-70-6pc" secondAttribute="centerX" id="EvU-sd-s6G"/>
-                            <constraint firstItem="jOG-Il-4on" firstAttribute="centerX" secondItem="Vhf-70-6pc" secondAttribute="centerX" id="Itl-sy-Gl8"/>
                             <constraint firstItem="dil-pI-wlZ" firstAttribute="centerX" secondItem="Vhf-70-6pc" secondAttribute="centerX" id="m52-dU-dHG"/>
                             <constraint firstItem="iFN-ze-iEE" firstAttribute="top" secondItem="Vhf-70-6pc" secondAttribute="top" constant="475" id="qWP-xs-NqJ"/>
                             <constraint firstItem="ev3-mT-4Ia" firstAttribute="top" secondItem="iFN-ze-iEE" secondAttribute="bottom" constant="40" id="rGF-au-gj0"/>
                             <constraint firstItem="dil-pI-wlZ" firstAttribute="top" secondItem="Hbi-fp-stD" secondAttribute="top" constant="40" id="z0w-pn-AXh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lab2" id="gJs-wq-eCs"/>
+                    <navigationItem key="navigationItem" title="Lab2" id="gJs-wq-eCs">
+                        <barButtonItem key="rightBarButtonItem" title="Lab3" id="yEU-0M-K4F">
+                            <connections>
+                                <segue destination="JIf-bR-qMm" kind="show" id="Nyz-jo-TSZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelValue" destination="VvS-FU-mrY" id="OdV-dI-fAa"/>
                     </connections>
@@ -415,7 +403,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Z9h-XM-7V0">
-                                <rect key="frame" x="156.66666666666666" y="549" width="80" height="191.33333333333337"/>
+                                <rect key="frame" x="156.66666666666666" y="549" width="80" height="139"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZA-84-Ufn">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34.333333333333336"/>
@@ -450,16 +438,6 @@
                                             <action selector="clearButtonTapped:" destination="JIf-bR-qMm" eventType="touchUpInside" id="gUb-gs-627"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-iY-JXG">
-                                        <rect key="frame" x="0.0" y="157" width="80" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Lab4">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="slB-ry-P3O" kind="show" id="6nx-ye-aLG"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="4Vo-hR-mv9"/>
@@ -477,7 +455,13 @@
                             <constraint firstItem="Z9h-XM-7V0" firstAttribute="centerX" secondItem="Aiu-LD-qCs" secondAttribute="centerX" id="sxv-xH-JEw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lab3" id="9N9-iW-fny"/>
+                    <navigationItem key="navigationItem" title="Lab3" id="9N9-iW-fny">
+                        <barButtonItem key="rightBarButtonItem" title="Lab4" id="Y2u-VN-LYh">
+                            <connections>
+                                <segue destination="slB-ry-P3O" kind="show" id="Q6d-t7-N5M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="Bdp-CP-HqS" id="01A-1x-9T1"/>
                         <outlet property="countryNameTextField" destination="qB7-Io-MFv" id="9Ns-Z9-V8C"/>
