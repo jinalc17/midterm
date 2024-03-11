@@ -26,9 +26,15 @@ class CanadaViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         cityTextField.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        setImage(named: "Canada") // Set default image when the view is loaded
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Set image to default "Canada" when the user navigates back to this page
+        setImage(named: "Canada")
     }
     
     // Lock orientation to portrait
@@ -38,8 +44,8 @@ class CanadaViewController: UIViewController, UITextFieldDelegate {
     
     //Calls this function when the tap is recognized.
     @objc func dismissKeyboard() {
-    //Causes the view (or one of its embedded text fields) to resign the first responder status.
-    view.endEditing(true)
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     
@@ -48,20 +54,25 @@ class CanadaViewController: UIViewController, UITextFieldDelegate {
     }
     
     func findCity() {
-        guard let text = cityTextField.text, !text.isEmpty else {
-            return // Do nothing if the text field is empty
+        let text = cityTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if text.isEmpty {
+            // If text field is empty, set image to default "Canada"
+            setImage(named: "Canada")
+            errorMessageLabel.isHidden = true // Hide error message
+        } else {
+            // Check if the entered city name matches any of the image names in the array
+            let lowercaseText = text.lowercased()
+            if cityImages.contains(lowercaseText) {
+                setImage(named: lowercaseText)
+                errorMessageLabel.isHidden = true
+            } else {
+                // Display error message and set image to default "Canada"
+                setImage(named: "Canada")
+                errorMessageLabel.isHidden = false
+                errorMessageLabel.text = "City not found"
+            }
         }
         
-        let lowercaseText = text.lowercased()
-        if cityImages.contains(lowercaseText) {
-            setImage(named: lowercaseText)
-            errorMessageLabel.isHidden = true
-        } else {
-            // Display error message and set image to default
-            setImage(named: "Canada")
-            errorMessageLabel.isHidden = false
-            errorMessageLabel.text = "City not found"
-        }
     }
     
     // Set image to the image view
