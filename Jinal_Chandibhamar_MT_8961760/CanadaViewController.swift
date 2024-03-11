@@ -35,6 +35,7 @@ class CanadaViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         // Set image to default "Canada" when the user navigates back to this page
         setImage(named: "Canada")
+        cityTextField.text = ""
     }
     
     // Lock orientation to portrait

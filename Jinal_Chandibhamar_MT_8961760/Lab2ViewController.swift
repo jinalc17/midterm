@@ -15,6 +15,10 @@ class Lab2ViewController: UIViewController {
     var tempNumberHolder = 0
     var step2flag = false;
     
+    // Lock orientation to portrait
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
     
     
     @IBAction func buttonInc(_ sender: Any) {

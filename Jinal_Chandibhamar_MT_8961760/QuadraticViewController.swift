@@ -35,6 +35,11 @@ class QuadraticViewController: UIViewController, UITextFieldDelegate {
         cTextField.keyboardType = .decimalPad
     }
     
+    // Lock orientation to portrait
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         guard let textA = aTextField.text, !textA.isEmpty,
@@ -89,8 +94,6 @@ class QuadraticViewController: UIViewController, UITextFieldDelegate {
         resultLabel.text = ""
         showMessage("Enter a value for A, B, and C to find X.")
     }
-    
-    
     
     func showMessage(_ message: String) {
         messageLabel.text = message

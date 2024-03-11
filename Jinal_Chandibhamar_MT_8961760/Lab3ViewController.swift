@@ -38,6 +38,11 @@ class Lab3ViewController: UIViewController , UITextFieldDelegate {
         showUserInformation()
     }
     
+    // Lock orientation to portrait
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         showAddButtonuserInformation()
     }
